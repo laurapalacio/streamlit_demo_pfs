@@ -61,8 +61,8 @@ def main() -> None:
                 st.write(f"Humidity: {response.output_parsed.humidity}")
 
             with col2:
-                st.image(response.output_parsed.image_url)
                 st.write(f"This is an image of {city_input}")
+                st.image(response.output_parsed.image_url)
 
 
 if __name__ == "__main__":
