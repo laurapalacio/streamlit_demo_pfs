@@ -1,8 +1,14 @@
 import streamlit as st
 from openai import OpenAI
+import openai
 from pydantic import BaseModel, Field
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
+load_dotenv()  # Load environment variables from a .env file
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class CityData(BaseModel):
     temperature: str
